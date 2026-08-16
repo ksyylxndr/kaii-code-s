@@ -1,0 +1,27 @@
+/* Animasi untuk card */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tombol WhatsApp dan Instagram */
+.btn-success, .btn-danger {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+/* Formulir Pemesanan */
+#order-form {
+    background-color: #75a8f5;
+}

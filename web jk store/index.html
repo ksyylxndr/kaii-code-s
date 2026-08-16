@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kuota, Pulsa, dan E-Wallet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Selamat Datang di JK CELL</h1>
+            <p class="lead">Kami menyediakan layanan pembelian kuota, pulsa, dan e-wallet dengan harga terbaik.</p>
+        </div>
+    </header>
+
+    <!-- Layanan -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Layanan Kami</h2>
+            <div class="row">
+                <!-- Kuota Internet -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="kuota.jpeg" class="card-img-top" alt="Kuota Internet">
+                        <div class="card-body">
+                            <h3 class="card-title">Kuota Internet</h3>
+                            <ul class="list-unstyled">
+                                <li>Kuota IM3</li>
+                                <li>Kuota 3</li>
+                                <li>Kuota TELKOMSEL</li>
+                                <li>Kuota AXIS</li>
+                                <li>Kuota XL</li>
+                                <li>Kuota SMARTFREN</li>
+                                <li>Kuota BY.U</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" onclick="orderService('Kuota Internet')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pulsa -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="pulsa.jpg" class="card-img-top" alt="Pulsa">
+                        <div class="card-body">
+                            <h3 class="card-title">Pulsa</h3>
+                            <ul class="list-unstyled">
+                                <li>Pulsa IM3</li>
+                                <li>Pulsa 3</li>
+                                <li>Pulsa TELKOMSEL</li>
+                                <li>Pulsa AXIS</li>
+                                <li>Pulsa XL</li>
+                                <li>Pulsa SMARTFREN</li>
+                                <li>Pulsa BY.U</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" onclick="orderService('Pulsa')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- E-Wallet -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="e-wallet.png" class="card-img-top" alt="E-Wallet">
+                        <div class="card-body">
+                            <h3 class="card-title">E-Wallet</h3>
+                            <ul class="list-unstyled">
+                                <li>Dana</li>
+                                <li>GoPay</li>
+                                <li>ShopeePay</li>
+                                <li>OVO</li>
+                                <li>LinkAja</li>
+                                <li>ISaku Indomaret</li>
+                                <li>DLL</li>
+                            </ul>
+                            <button class="btn btn-primary w-100" onclick="orderService('E-Wallet')">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulir Pemesanan -->
+    <section id="order-form" class="py-5 bg-light" style="display: none;">
+        <div class="container">
+            <h2 class="text-center mb-4">Formulir Pemesanan</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="orderForm" class="bg-white p-4 shadow rounded">
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Layanan:</label>
+                            <input type="text" id="service" class="form-control" readonly>
+                        </div>
+                        <!-- Pilih Provider (untuk Kuota dan Pulsa) -->
+                        <div id="providerSection" class="mb-3" style="display: none;">
+                            <label for="provider" class="form-label">Pilih Provider:</label>
+                            <select id="provider" class="form-select">
+                                <option value="Telkomsel">Telkomsel</option>
+                                <option value="XL">XL</option> 
+                                <option value="Axis">Axis</option>
+                                <option value="Indosat">Indosat</option>
+                                <option value="Tri">Tri</option>
+                                <option value="Smartfren">Smartfren</option>
+                                <option value="By.U">By.U</option>
+                            </select>
+                        </div>
+                        <!-- Pilih E-Wallet (untuk E-Wallet) -->
+                        <div id="ewalletSection" class="mb-3" style="display: none;">
+                            <label for="ewallet" class="form-label">Pilih E-Wallet:</label>
+                            <select id="ewallet" class="form-select">
+                                <option value="Dana">Dana</option>
+                                <option value="GoPay">GoPay</option>
+                                <option value="ShopeePay">ShopeePay</option>
+                                <option value="OVO">OVO</option>
+                                <option value="LinkAja">LinkAja</option>
+                                <option value="iSaku Indomaret">ISaku Indomaret</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Nomor HP:</label>
+                            <input type="text" id="phone" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="text" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Jumlah/Nominal:</label>
+                            <input type="text" id="amount" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Kirim Pesanan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h2 class="mb-3">Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan, silakan hubungi kami melalui:</p>
+            <a href="https://wa.me/6289525856185" target="_blank" class="btn btn-success me-2">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/ksyalxndr" target="_blank" class="btn btn-danger">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
