@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FORMULIR</title>
+  <style>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      /*height: 100vh;*/
+    }
+
+    .container>label {
+      color: white;
+      margin-top: 10px;
+    }
+
+    .container>input {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      margin: 4px;
+    }
+
+    .container>input::placeholder {
+      color: lightgray;
+    }
+
+    .container>input[type="radio"] {
+      accent-color: black;
+    }
+
+    .container>input[type="checkbox"] {
+      accent-color: crimson;
+    }
+
+    select {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .container>textarea {
+      background: #333;
+      color: #fff;
+    }
+
+    .container>textarea::placeholder {
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <label>Input text</label>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="yourmail@gmail.com">
+    <input type="password" placeholder="Password">
+
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="other">
+
+    <label>Input checkbox</label>
+    <input type="checkbox" checked="true" name="subscribe" value="yes">
+
+    <label>Message</label>
+    <textarea name="message" placeholder="Enter your message"></textarea>
+
+    <label>Input date</label>
+    <input type="date" id="dateInput" name="birthdate">
+
+    <label>Input file</label>
+    <input type="file" name="fileupload">
+
+      <div class="form-group">
+          <button type="submit">Kirim</button>
+      </div>
+  </form>
+
+
+    <label>follow ig: @ksyalxndr</label>
+
+    <script>
+      var currentDate = new Date();
+
+      var formattedDate = currentDate.toISOString().substr(0, 10);
+
+      document.getElementById("dateInput").value = formattedDate;
+    </script>
+  </div>
+</body>
+
+</html>
