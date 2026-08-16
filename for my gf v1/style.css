@@ -1,0 +1,164 @@
+/* Import Font Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #faf0f4; /* Warna pink soft */
+  color: #333;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background.jpg') no-repeat center center/cover;
+  z-index: -1;
+  animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Efek Love-Love */
+.love-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.love {
+  position: absolute;
+  font-size: 20px;
+  color: #ff7eb9; /* Warna pink soft */
+  animation: fall linear infinite;
+  user-select: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9); /* Background semi-transparan */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #ff6f61; /* Warna coral soft */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.pesan-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pesan-card.muncul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-content {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.btn-motivasi {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-motivasi:hover {
+  background: #ff4a3d;
+  transform: translateY(-2px);
+}
+
+.musik-control, .theme-control {
+  margin-top: 20px;
+}
+
+#tombol-musik, #tombol-tema {
+  background: rgba(255, 111, 97, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+#tombol-musik:hover, #tombol-tema:hover {
+  background: rgba(255, 111, 97, 1);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode .container {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+}
+
+body.dark-mode .pesan-card {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+}
+
+body.dark-mode .card-content {
+  color: #f0f0f0;
+}

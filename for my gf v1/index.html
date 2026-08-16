@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for jiaa cantiii💗</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-parallax"></div>
+  <div class="love-background"></div> <!-- Efek love-love -->
+  <div class="container">
+    <h1>alloo sayangg</h1>
+    <p>akuu punya sesuatuu buat kamu, pencet dibawah itu bisa berkali-kali ya sayangg, itu ada mode gelap sama musik juga, kalo mau coba pencet aja hehee...</p>
+
+    <!-- Pesan Motivasi dalam Card -->
+    <div id="pesan-motivasi" class="pesan-card">
+      <div class="card-content">
+        Klik tombol di bawah untuk lihat pesan motivasi!
+      </div>
+    </div>
+    <button onclick="tampilkanPesan()" class="btn-motivasi">pencet disinii sayangg</button>
+
+    <!-- Tombol Kontrol Musik -->
+    <div class="musik-control">
+      <button id="tombol-musik" onclick="toggleMusik()">▶️ Putar Musik</button>
+    </div>
+
+    <!-- Tombol Ganti Tema -->
+    <div class="theme-control">
+      <button id="tombol-tema" onclick="toggleTema()">🌙 Mode Gelap</button>
+    </div>
+  </div>
+
+  <!-- Musik Background -->
+  <audio id="musik" loop>
+    <source src="Feast - Nina (Official Lyric Video).mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
