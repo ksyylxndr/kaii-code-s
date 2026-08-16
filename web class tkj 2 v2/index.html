@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kelas XI TKJ 2 - SMKN 3 Kota Serang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Memuat Kelas XI TKJ 2...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>XI TKJ 2</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Beranda</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> <span>Tentang</span></a></li>
+                <li><a href="#schedule" class="nav-link"><i class="fas fa-calendar-alt"></i> <span>Jadwal</span></a></li>
+                <li><a href="#students" class="nav-link"><i class="fas fa-users"></i> <span>Siswa</span></a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> <span>Galeri</span></a></li>
+                <li><a href="#announcement" class="nav-link"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
+                <li><a href="#tasks" class="nav-link"><i class="fas fa-tasks"></i> <span>Tugas</span></a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> <span>Kontak</span></a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Ubah Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge">Kelas Teknologi</div>
+                    <h1 class="hero-title">Kelas <span class="highlight">XI TKJ 2</span></h1>
+                    <p class="hero-subtitle">SMKN 3 Kota Serang | 2024-2027</p>
+                    <p class="hero-description">Kelas Teknik Komputer dan Jaringan yang berfokus pada pengembangan skill IT, jaringan komputer, dan pemrograman.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h3>38</h3>
+                                <p>Siswa</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-male"></i>
+                            <div>
+                                <h3>29</h3>
+                                <p>Laki-laki</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-female"></i>
+                            <div>
+                                <h3>9</h3>
+                                <p>Perempuan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta-button" id="exploreBtn">
+                        <span>Jelajahi Kelas</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="classroom-card">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Lab. TKJ 2</h3>
+                        </div>
+                        <div class="card-content">
+                            <p><i class="fas fa-map-marker-alt"></i> Gedung B Lt. 2</p>
+                            <p><i class="fas fa-user-tie"></i> Wali: Eni Nurfitriani, S.Pd.I</p>
+                            <p><i class="fas fa-trophy"></i> Juara Lomba Jaringan 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title">Tentang <span>Kelas</span></h2>
+                <p class="section-subtitle">Kenali lebih dekat kelas XI TKJ 2</p>
+            </div>
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Visi</h3>
+                    <p>Menghasilkan lulusan TKJ yang kompeten dalam bidang jaringan komputer dan programming.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Misi</h3>
+                    <p>1. Menguasai skill jaringan & programming<br>
+                       2. Mengembangkan kreativitas IT<br>
+                       3. Membangun karakter profesional</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Prestasi</h3>
+                    <p>• Juara 1 Lomba Jaringan<br>
+                       • Juara 2 Web Design<br>
+                       • Finalis Olimpiade IT</p>
+                </div>
+            </div>
+            
+            <div class="class-structure">
+                <div class="structure-card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Struktur Kelas</h3>
+                    <div class="structure-list">
+                        <div class="structure-item">
+                            <strong>Wali Kelas:</strong>
+                            <p>Eni Nurfitriani, S.Pd.I</p>
+                        </div>
+                        <div class="structure-item">
+                            <strong>Ketua:</strong>
+                            <p>M. Fijar Razzaqi</p>
+                        </div>
+                        <div class="structure-item">
+                            <strong>Wakil:</strong>
+                            <p>Adly Mulya Ramadhan</p>
+                        </div>
+                        <div class="structure-item">
+                            <strong>Sekretaris:</strong>
+                            <p>Cornelia A. S. & Febriana W.</p>
+                        </div>
+                        <div class="structure-item">
+                            <strong>Bendahara:</strong>
+                            <p>Kasya Putra & Mualif I. R.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="motto-card">
+                    <h3><i class="fas fa-quote-left"></i> Motto Kelas</h3>
+                    <p class="motto-text">"Code Today, Build Tomorrow"</p>
+                    <p class="motto-sub">Menjadi Programmer Tangguh, Menciptakan Solusi Digital</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="section-header">
+                <h2 class="section-title">Jadwal <span>Pelajaran</span></h2>
+                <p class="section-subtitle">Jadwal minggu ini</p>
+            </div>
+            <div class="day-selector" id="daySelector">
+                <button class="day-btn active" data-day="senin">Sen</button>
+                <button class="day-btn" data-day="selasa">Sel</button>
+                <button class="day-btn" data-day="rabu">Rab</button>
+                <button class="day-btn" data-day="kamis">Kam</button>
+                <button class="day-btn" data-day="jumat">Jum</button>
+            </div>
+            <div class="schedule-table" id="scheduleTable">
+                <!-- Schedule loaded by JavaScript -->
+            </div>
+            <div class="current-schedule">
+                <div class="current-class">
+                    <h3><i class="fas fa-clock"></i> Sekarang</h3>
+                    <div class="class-info" id="currentClass">
+                        <div class="class-time">08:00 - 09:30</div>
+                        <div class="class-name">Jaringan Komputer</div>
+                    </div>
+                </div>
+                <div class="next-class">
+                    <h3><i class="fas fa-forward"></i> Berikutnya</h3>
+                    <div class="class-info" id="nextClass">
+                        <div class="class-time">09:30 - 11:00</div>
+                        <div class="class-name">Pemrograman Web</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students" class="students-section">
+            <div class="section-header">
+                <h2 class="section-title">Anggota <span>Kelas</span></h2>
+                <p class="section-subtitle">38 siswa XI TKJ 2</p>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="studentSearch" placeholder="Cari nama siswa...">
+                </div>
+            </div>
+            <div class="students-container" id="studentsContainer">
+                <!-- Students loaded by JavaScript -->
+            </div>
+            <button class="load-more" id="loadMoreBtn">
+                <span>Tampilkan Lebih Banyak</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">Galeri <span>Kelas</span></h2>
+                <p class="section-subtitle">Moment berharga XI TKJ 2</p>
+            </div>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="practicum">Praktikum</button>
+                <button class="filter-btn" data-filter="activity">Kegiatan</button>
+                <button class="filter-btn" data-filter="achievement">Prestasi</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Announcement Section -->
+        <section id="announcement" class="announcement-section">
+            <div class="section-header">
+                <h2 class="section-title">Pengumuman <span>Terbaru</span></h2>
+                <p class="section-subtitle">Informasi penting untuk siswa</p>
+            </div>
+            <div class="announcement-container" id="announcementContainer">
+                <!-- Announcements loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="tasks-section">
+            <div class="section-header">
+                <h2 class="section-title">Tugas <span>& Project</span></h2>
+                <p class="section-subtitle">Daftar tugas yang harus diselesaikan</p>
+            </div>
+            <div class="tasks-list" id="tasksList">
+                <!-- Tasks loaded by JavaScript -->
+            </div>
+            <div class="tasks-stats">
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3 id="completedTasks">0</h3>
+                        <p>Selesai</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3 id="pendingTasks">0</h3>
+                        <p>Berjalan</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div>
+                        <h3 id="urgentTasks">0</h3>
+                        <p>Mendesak</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Kontak <span>Kelas</span></h2>
+                <p class="section-subtitle">Hubungi kami untuk informasi</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>tkj2@smkn3kotaserang.sch.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>(0254) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Lokasi</h3>
+                            <p>Jl. Pendidikan No. 45, Kota Serang</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <h3><i class="fas fa-paper-plane"></i> Kirim Pesan</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Kirim Pesan</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>XI TKJ 2</span>
+            </div>
+            <div class="footer-info">
+                <p>SMKN 3 Kota Serang</p>
+                <p>Angkatan 2024-2027</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Kelas XI TKJ 2. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
