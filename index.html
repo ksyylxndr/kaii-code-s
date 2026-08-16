@@ -3,32 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anniversary Kita</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Happy Anniversary cantikk <3 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
-    <div class="particles"></div> <!-- Efek partikel jatuh -->
-    <div class="container">
-        <h1 class="title animate__animated animate__fadeInDown">Selamat Anniversary, Sayang!</h1>
-        <div id="messageContainer">
-            <p id="message" class="message animate__animated animate__fadeIn">Klik di sini untuk membaca perasaanku padamu 💖</p>
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-toggle-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Musik latar -->
+    <div class="music-player">
+        <button id="musicToggle" class="music-toggle">
+            <i class="fas fa-music"></i>
+            <span class="music-text">Putar Musik</span>
+        </button>
+        <audio id="backgroundMusic" loop>
+            <source src="Tiara Andini, Arsy Widianto - Cintanya Aku (Official Lyric Video).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles-bg"></div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
         </div>
     </div>
 
-    <!-- Tombol Musik -->
-    <div id="musicButton" class="music-button">
-        <i id="musicIcon" class="fas fa-play"></i>
-    </div>
+    <!-- Floating Messages -->
+    <div class="floating-messages" id="floatingMessages"></div>
 
-    <!-- Musik Latar -->
-    <audio id="backgroundMusic" loop>
-        <source src="perfect.mp3" type="audio/mpeg"> <!-- Ganti dengan lagu favorit kalian -->
-        Your browser does not support the audio element.
-    </audio>
+    <div class="container">
+        <!-- Header dengan animasi kalender -->
+        <header class="header">
+            <div class="calendar-animation">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <span class="month">FEBRUARI</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="days">
+                            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                        </div>
+                        <div class="dates">
+                            <!-- Tanggal akan diisi oleh JavaScript -->
+                        </div>
+                    </div>
+                    <div class="special-date">
+                        <span class="heart"><i class="fas fa-heart"></i></span>
+                        <span class="date-29">29</span>
+                    </div>
+                </div>
+                <div class="calendar-flip">
+                    <div class="flip-card">
+                        <div class="flip-front">2024</div>
+                        <div class="flip-back">2026</div>
+                    </div>
+                    <div class="flip-label">2 Tahun</div>
+                </div>
+            </div>
+            
+            <h1 class="main-title">Happy Anniversary <span class="highlight">sayangggg</span></h1>
+            <p class="subtitle">happy anniv yang ke 2 yaaa sayangkuu cintakuuuuu cantikuuuuu maniskuuu</p>
+            <p class="anniversary-date"><i class="fas fa-calendar-star"></i> 29 Februari - Hanya muncul setiap 4 tahun sekali</p>
+        </header>
+
+        <!-- Konten utama -->
+        <main>
+            <!-- Pesan Anniversary -->
+            <section class="message-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-quote-left"></i> Pesan Anniversary <i class="fas fa-quote-right"></i></h2>
+                </div>
+                <div class="message-content">
+                    <div class="message-card">
+                        <div class="message-text">
+                            <p>ditanggal yang muncul hanya 4 tahun sekali, kita merayakan perjalanan 2 tahun bersama. kamu itu bagaikan seperti tanggal 29 februari sayang, yang di mana kamu itu sangat langka dan spesial, dan momen momen berharga sama kamu itu gabisa dilupain.</p>
+                            <p>dalam waktu kurang lebih 730 hari kita telah bersama, banyakk bangett lika liku perjalanan smpe bisa sejauh ini, baik senang, sedih, first time kita pelukan, french kiss, bahkan hal yang sangat jauh dri ituu, cuma kita dan cassy yang tau hehehe....</p>
+                            <p>walaupun tanggal 29 februari hanya dalam 4 tahun sekali, tapii cintaa akuuu tumbuhhh setiappp hariii tanpaa hentiiii. selamattt ulang tahunnn hubungann kita yang ke-2 sayanggggg!</p>
+                        </div>
+                        <div class="message-stats">
+                            <div class="stat">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Tahun</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">730</div>
+                                <div class="stat-label">Hari</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">29</div>
+                                <div class="stat-label">Tanggal Spesial</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label">Kenangan</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galeri Kenangan -->
+            <section class="gallery-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-images"></i> Galeri Kenangan</h2>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <div class="gallery-image" style="background-image: url('WhatsApp\ Image\ 2026-02-27\ at\ 21.26.52\ \(1\).jpeg');"></div>
+                        <div class="gallery-overlay">
+                            <h3>Moment awal kenal</h3>
+                            <p>Awal kita kenal, yang akhirnya jadi awal cerita cinta kita</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image" style="background-image: url('WhatsApp\ Image\ 2026-02-27\ at\ 21.26.52.jpeg');"></div>
+                        <div class="gallery-overlay">
+                            <h3>Moment first meet</h3>
+                            <p>Moment pertama kali kita ketemu, disini kita tangannya pada gemeter & dingin..</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-image" style="background-image: url('WhatsApp\ Image\ 2026-02-27\ at\ 21.39.24.jpeg');"></div>
+                        <div class="gallery-overlay">
+                            <h3>Sekarang</h3>
+                            <p>Sekarang kita kalo ketemu udah ga gemeter tangan lgi, tpi geter gara gara..</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline Perjalanan -->
+            <section class="timeline-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> Timeline Perjalanan</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">29 Feb 2024</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>momen pertama</h3>
+                            <p>ditanggal 29 februari yang langka, disinii aku langsung ngungkapin perasaan akuu ke kamuuu, yang awalnya dari global emel -1 mid/roam ehh aku malah jatuh cinta sama kamuuu hhehhe</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - 2025</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>tahun pertama</h3>
+                            <p>disiniii kita mulai mengenal satu sama lain, membangun fondasi hubungann, dan disini akuu masii malu malu sama kamuuu, bahkann video call pun masii maluu</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 - 2026</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>tahun Kedua</h3>
+                            <p>ditahun inii hubungan kita sudah mulai matang, saling cerita cerita semuanya, saling mendukung, kalo ada apa apa ga di tutup tutupin, ooiyaaa di tahun ini jugaa kita first meet yaituu padaa tanggall 18 januari 2025. akuuu setelah beneran ketemu kamu rasanya ga nyangka kamu secantik ituuu </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">28 Feb 2026</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2 tahun anniversary</h3>
+                            <p>pada tanggal 28 februari 2026, kitaa sudahh 2 tahunn bersamaa walaupun tanggall 29 februari nya 4 tahunnn sekaliii, tapiii cinta akuu ke kamu setiap setiap hariiiiiii yeyeyyyyy >< </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hitung Mundur ke Anniversary Berikutnya -->
+            <section class="countdown-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clock"></i> Menuju 29 Februari Berikutnya</h2>
+                </div>
+                <div class="countdown-container">
+                    <div class="countdown-info">
+                        <p>Karena 29 Februari hanya muncul setiap 4 tahun, kita harus menunggu lebih lama untuk merayakan anniversary di tanggal yang sama. Anniversary berikutnya di tanggal 29 Februari adalah:</p>
+                        <div class="next-date">29 Februari 2028</div>
+                    </div>
+                    <div class="countdown-display">
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="years">0</div>
+                            <div class="countdown-label">Tahun</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="days">0</div>
+                            <div class="countdown-label">Hari</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="hours">0</div>
+                            <div class="countdown-label">Jam</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="minutes">0</div>
+                            <div class="countdown-label">Menit</div>
+                        </div>
+                        <div class="countdown-box">
+                            <div class="countdown-value" id="seconds">0</div>
+                            <div class="countdown-label">Detik</div>
+                        </div>
+                    </div>
+                    <div class="countdown-note">
+                        <p><i class="fas fa-info-circle"></i> Anniversary kita berikutnya akan dirayakan setiap tahun, tetapi perayaan spesial di tanggal 29 Februari hanya setiap 4 tahun sekali.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pesan Khusus -->
+            <section class="special-message">
+                <div class="heart-animation">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="special-content">
+                    <h2>untukkk jiaa pacarr aku yang cantikk</h2>
+                    <p class="special-text">
+                        setiap hari bersamaa kamu ituu hadiahh, meskipun 29 februari hanya datang 4 tahun sekali, tapiiii cintakuu padamuu tumbuhh setiap hariiii.
+                        <span class="love-text">i always love u foreverrr babeeeeeee<3 </span>
+                    </p>
+                    <button class="love-button" id="loveButton">
+                        <i class="fas fa-heart"></i> Klik untuk Pesan Spesial
+                    </button>
+                    <div class="hidden-message" id="hiddenMessage">
+                        <p>makasiii ya sayangg udaa bertahan sejauh ini samaa akuuu, udaaa mauu samaa akuuu, udaa cinta dan sayang sama akuuu, akub bersyukurr bangett punya pacar kaya kamu, yang cantik, lucu, imut, pinter masak, pinter dalam segala hal, pinter enakin aku pinter goyangin aku hehheeh maaf terlalu jujur... kamu enak banget sayang ga bohong.... HEHEHEHE... dah ah ngaceng ak. HAPPY ANNIVERSARY YANG KE 2 TAHUNNNN CINTAKUU SAYANGGG SEMOGAAA KITAA KE DEPANNYA SEMAKIN LEBIH BAIK LAGII DAN SEMOGA HUBUNGAN KITAA SELAMANYA YAAAA.... AAMIINNNN...</p>
+                        <div class="signature">- dengan cinta, aka -</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Love Meter -->
+            <section class="love-meter-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-heartbeat"></i> Love Meter</h2>
+                </div>
+                <div class="love-meter-container">
+                    <div class="love-meter">
+                        <div class="meter-fill" id="meterFill"></div>
+                        <div class="meter-label">Cinta Kita: <span id="lovePercentage">100%</span></div>
+                    </div>
+                    <div class="meter-controls">
+                        <button class="meter-btn" id="decreaseBtn">-</button>
+                        <input type="range" id="loveSlider" min="0" max="100" value="100">
+                        <button class="meter-btn" id="increaseBtn">+</button>
+                    </div>
+                    <p class="meter-note">Geser slider untuk mengukur seberapa besar cintamu hari ini! 💕</p>
+                </div>
+            </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-heart"></i>Happy Anniversary jiaa & akaa
+                </div>
+                <p class="footer-text">dibuattt dengann penuhh cintaaa untukkk jiaaa dariii akaaa >< </p>
+                <div class="footer-icons">
+                    <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="icon-circle"><i class="fas fa-heart"></i></div>
+                    <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                    <div class="icon-circle"><i class="fas fa-gift"></i></div>
+                </div>
+                <p class="copyright">© 2026 - Anniversary jiaa & akaa</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
