@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special monthversary message with love and animated hearts.">
+    <title>Happy Monthversary!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background-size: 300% 300%;
+            animation: gradientBG 10s ease infinite;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.8em;
+            margin: 1em 0;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        .heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 2em 0;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background: #ff6a88;
+            border-radius: 50%;
+            animation: float 4s infinite ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #ff6a88;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .footer {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 3s ease-in-out;
+        }
+        .audio-control {
+            margin-top: 20px;
+            animation: fadeIn 4s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Monthversary Sayanggkuu ❤️</h1>
+    <p>Tanggal ini tanggal dimana kita saling mengungkapkan perasaan, ga nyangka ya sayang yang awalnya cuma temenin
+         belajar jungler ehh bisa ada hubungan yang uda 10 bulan inii, semogaa hubungan kita ke depannya
+         makin baik lagi yaa sayang, kaloo ada apa-apa cerita sama aku ya sayang jangan pernah takut cerita
+         sama aku yaa, 10 bulan bukan waktu yang singkat, udaa banyak hal-hal yang kita laluin bareng, mau
+         sedih ataupun bahagia, semoga aku dan kamu juga menjadi lebih baik lagi kedepannya untuk hubungan kita ya sayang.. 
+
+    </p>
+<p>wooff uu pacarkuuu yang cantikkkkkkkk💕</p>
+    <div class="heart-container">
+        <div class="heart" style="top: 0; left: 50px;"></div>
+        <div class="heart" style="top: 100px; left: 150px; animation-delay: 1s;"></div>
+        <div class="heart" style="top: 200px; left: 0; animation-delay: 2s;"></div>
+        <div class="heart" style="top: 50px; left: 200px; animation-delay: 3s;"></div>
+    </div>
+    <div class="footer">- Dari Kasya untuk Jiaaaaaaaa <3 -</div>
+    
+    <!-- Audio Player -->
+    <div class="audio-control">
+        <audio controls autoplay loop>
+            <source src="Afgan & Raisa - Percayalah _ Official Video Clip.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung audio.
+        </audio>
+    </div>
+</body>
+</html>
