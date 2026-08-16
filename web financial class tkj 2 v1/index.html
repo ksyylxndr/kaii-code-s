@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>DATA KAS • XI TKJ 2 SMKN 3 Serang</title>
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="LOGO KELAS.jpg">
+</head>
+<body>
+  <!-- SPLASH SCREEN -->
+  <div id="splashScreen" class="splash">
+    <div class="splash-card">
+      <div class="splash-logo">
+        <i class="fas fa-coins"></i>
+      </div>
+      <h1 class="splash-title">KAS<span>TEKAJE</span></h1>
+      <p class="splash-school">SMKN 3 KOTA SERANG • XI TKJ 2</p>
+      
+      <div class="splash-stats">
+        <div class="stat">
+          <span class="stat-value">38</span>
+          <span class="stat-label">Siswa</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">4x</span>
+          <span class="stat-label">/Bulan</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">2k</span>
+          <span class="stat-label">/Minggu</span>
+        </div>
+      </div>
+
+      <div class="splash-buttons">
+        <button id="btnLoginView" class="btn-splash btn-view">
+          <i class="fas fa-eye"></i> Lihat Kas
+        </button>
+        <button id="btnLoginAdmin" class="btn-splash btn-admin">
+          <i class="fas fa-crown"></i> Admin
+        </button>
+      </div>
+
+      <div id="adminLoginForm" class="admin-form hidden">
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="adminPassword" placeholder="Password Admin">
+        </div>
+        <div class="admin-actions">
+          <button id="btnAdminSubmit" class="btn-splash btn-admin">Masuk</button>
+          <button id="btnBackToSplash" class="btn-splash btn-view">Kembali</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="mainApp" class="app hidden">
+    <!-- TOP BAR MOBILE -->
+    <div class="top-bar">
+      <div class="top-left">
+        <i class="fas fa-coins" style="color: var(--primary); font-size: 24px;"></i>
+        <div>
+          <h1>KASTEKAJE</h1>
+          <small>XI TKJ 2 • SMKN 3 Kota Serang</small>
+        </div>
+      </div>
+      <div class="top-right">
+        <button id="btnThemeToggle" class="btn-icon">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="btnLogout" class="btn-icon">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- USER INFO BAR -->
+    <div class="user-bar">
+      <div class="user-badge">
+        <i class="fas fa-user-circle"></i>
+        <span id="userDisplayName">Viewer</span>
+      </div>
+      <div class="edit-badge" id="editStatus">
+        <i class="fas fa-eye"></i> Mode Lihat
+      </div>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="data">
+        <i class="fas fa-table"></i>
+        <span>Data Kas</span>
+      </button>
+      <button class="tab-btn" data-tab="saldo">
+        <i class="fas fa-wallet"></i>
+        <span>Saldo</span>
+      </button>
+      <button class="tab-btn" data-tab="rincian">
+        <i class="fas fa-receipt"></i>
+        <span>Rincian</span>
+      </button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <!-- TAB DATA KAS -->
+      <div id="tab-data" class="tab-panel active">
+        <!-- FILTERS -->
+        <div class="filters">
+          <div class="filter-item">
+            <i class="fas fa-tag"></i>
+            <input type="number" id="amountInput" value="2000" min="0" step="100">
+          </div>
+          <div class="filter-item">
+            <i class="fas fa-calendar"></i>
+            <select id="monthSelect"></select>
+          </div>
+          <div class="filter-item">
+            <i class="fas fa-calendar-alt"></i>
+            <select id="yearSelect">
+              <option value="2025">2025</option>
+              <option value="2026" selected>2026</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ADMIN BUTTONS -->
+        <div class="admin-buttons">
+          <button id="btnResetMonth" class="btn btn-danger" disabled>
+            <i class="fas fa-undo-alt"></i> Reset Bulan
+          </button>
+          <button id="btnResetAll" class="btn btn-danger" disabled>
+            <i class="fas fa-trash-alt"></i> Reset All
+          </button>
+          <button id="btnExportAll" class="btn btn-outline">
+            <i class="fas fa-download"></i> CSV
+          </button>
+        </div>
+
+        <!-- TABLE VERTICAL SCROLL -->
+        <div class="table-container-vertical">
+          <table id="kasTable">
+            <thead id="tableHead">
+              <tr>
+                <th>Nama Siswa</th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>M3</th>
+                <th>M4</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- LEGEND -->
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-color paid"></span>
+            <span>Lunas</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color unpaid"></span>
+            <span>Belum</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color viewer-mode"></span>
+            <span>Viewer (Baca)</span>
+          </div>
+        </div>
+
+        <!-- STATS MINI -->
+        <div class="stats-mini">
+          <div class="stat-mini">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <small>Dibayar</small>
+              <strong id="totalBayarBulanIni">0</strong>
+            </div>
+          </div>
+          <div class="stat-mini">
+            <i class="fas fa-percent"></i>
+            <div>
+              <small>Persentase</small>
+              <strong id="persentaseBulanIni">0%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB SALDO -->
+      <div id="tab-saldo" class="tab-panel">
+        <!-- SALDO CARDS -->
+        <div class="saldo-cards">
+          <div class="card gradient">
+            <div class="card-icon">
+              <i class="fas fa-piggy-bank"></i>
+            </div>
+            <div>
+              <small>Saldo</small>
+              <h3 id="saldoTotal">Rp0</h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div>
+              <small>Masuk</small>
+              <h3 id="totalIn">Rp0</h3>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-arrow-down"></i>
+            </div>
+            <div>
+              <small>Keluar</small>
+              <h3 id="totalOut">Rp0</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIWAYAT -->
+        <div class="section-title">
+          <i class="fas fa-history"></i>
+          <h3>Riwayat Transaksi</h3>
+          <button id="refreshSaldo" class="btn-icon-small">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="table-mini">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Keterangan</th>
+                <th>Masuk</th>
+                <th>Keluar</th>
+                <th>Saldo</th>
+              </tr>
+            </thead>
+            <tbody id="saldoBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB RINCIAN -->
+      <div id="tab-rincian" class="tab-panel">
+        <!-- FORM PENGELUARAN -->
+        <div class="expense-form">
+          <h4><i class="fas fa-plus-circle"></i> Tambah Pengeluaran</h4>
+          <div class="form-group">
+            <input type="text" id="expDesc" placeholder="Keterangan">
+            <input type="number" id="expAmount" placeholder="Jumlah">
+            <input type="date" id="expDate">
+            <button id="btnAddExpense" class="btn btn-primary" disabled>
+              <i class="fas fa-save"></i> Simpan
+            </button>
+          </div>
+          <small class="admin-note" id="adminExpenseNote">
+            <i class="fas fa-lock"></i> Mode Viewer - Tidak bisa menambah
+          </small>
+        </div>
+
+        <!-- DAFTAR PENGELUARAN -->
+        <div class="section-title">
+          <i class="fas fa-list"></i>
+          <h3>Daftar Pengeluaran</h3>
+          <button id="btnExport" class="btn-icon-small">
+            <i class="fas fa-download"></i>
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table-mini">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="rincianBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-contacts">
+        <div class="contact">
+          <strong>Kasya Putra</strong>
+          <div>
+            <a href="https://wa.me/6289525856185"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/kaiialexander"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact">
+          <strong>Mualif Ikhsan Rafif</strong>
+          <div>
+            <a href="https://wa.me/6285218881521"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/aiootstroo"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">Developed By Kasya Putra</p>
+      <p class="copyright">© 2026 XI TKJ 2 SMKN 3 Kota Serang. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
