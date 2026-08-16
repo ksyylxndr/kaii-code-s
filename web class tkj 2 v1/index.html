@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Digital - XI TKJ 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="book">
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+            </div>
+            <p>Memuat Kelas Digital XI TKJ 2...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>XI TKJ 2</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                <li><a href="#schedule" class="nav-link"><i class="fas fa-calendar-alt"></i> Jadwal</a></li>
+                <li><a href="#students" class="nav-link"><i class="fas fa-users"></i> Siswa</a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galeri</a></li>
+                <li><a href="#announcement" class="nav-link"><i class="fas fa-bullhorn"></i> Pengumuman</a></li>
+                <li><a href="#tasks" class="nav-link"><i class="fas fa-tasks"></i> Tugas</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Ubah Tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="sound-toggle" id="soundToggle" title="Suara Latar">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content animate__animated animate__fadeInLeft">
+                    <div class="badge">Kelas Unggulan Teknologi</div>
+                    <h1 class="hero-title">Selamat Datang di <span class="highlight">Kelas XI TKJ 2</span></h1>
+                    <p class="hero-subtitle">Angkatan 2024-2027 - SMKN 3 Kota Serang</p>
+                    <p class="hero-description">Kelas Teknik Komputer dan Jaringan yang berfokus pada pengembangan skill IT, jaringan komputer, dan pemrograman untuk menghadapi era digital.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h3>38</h3>
+                                <p>Siswa</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-male"></i>
+                            <div>
+                                <h3>29</h3>
+                                <p>Laki-laki</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-female"></i>
+                            <div>
+                                <h3>9</h3>
+                                <p>Perempuan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="cta-button" id="exploreBtn">Jelajahi Kelas <i class="fas fa-arrow-right"></i></button>
+                        <button class="cta-button secondary" id="videoBtn">Tonton Video <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="hero-image animate__animated animate__fadeInRight">
+                    <div class="floating-elements">
+                        <div class="floating-element el1"><i class="fas fa-network-wired"></i></div>
+                        <div class="floating-element el2"><i class="fas fa-code"></i></div>
+                        <div class="floating-element el3"><i class="fas fa-server"></i></div>
+                        <div class="floating-element el4"><i class="fas fa-database"></i></div>
+                    </div>
+                    <div class="classroom-illustration">
+                        <div class="board">
+                            <h3>Welcome to TKJ Class!</h3>
+                            <p>#DigitalFuture</p>
+                        </div>
+                        <div class="desk"></div>
+                        <div class="student student1"></div>
+                        <div class="student student2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title">Tentang <span>Kelas Kita</span></h2>
+                <p class="section-subtitle">Mengenal lebih dekat komunitas pembelajaran Teknik Komputer dan Jaringan</p>
+            </div>
+            <div class="about-container">
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Visi Kelas</h3>
+                    <p>Menjadi kelas TKJ unggulan yang menghasilkan lulusan kompeten dalam bidang jaringan komputer dan programming, siap bersaing di dunia kerja dan wirausaha teknologi.</p>
+                    <button class="read-more">Selengkapnya</button>
+                </div>
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Misi Kelas</h3>
+                    <p>1. Menguasai skill jaringan komputer & programming<br>
+                       2. Mengembangkan kreativitas dalam bidang IT<br>
+                       3. Membangun karakter profesional & mandiri<br>
+                       4. Berprestasi dalam kompetisi IT</p>
+                    <button class="read-more">Selengkapnya</button>
+                </div>
+                <div class="about-card animate-on-scroll">
+                    <div class="about-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Prestasi</h3>
+                    <p>Juara 1 Lomba Jaringan Komputer Kota<br>
+                       Juara 2 Web Design Competition<br>
+                       Finalis Olimpiade IT Tingkat Provinsi<br>
+                       Juara 3 Mobile App Development</p>
+                    <button class="read-more">Selengkapnya</button>
+                </div>
+            </div>
+            
+            <div class="class-info">
+                <div class="info-details animate-on-scroll">
+                    <h3><i class="fas fa-chalkboard"></i> Struktur Kelas</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Wali Kelas:</strong>
+                            <p>Eni Nurfitriani, S.Pd.I</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Ketua Kelas:</strong>
+                            <p>M. Fijar Razzaqi</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Wakil Ketua:</strong>
+                            <p>Adly Mulya Ramadhan</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Sekretaris 1:</strong>
+                            <p>Cornelia Agustina Sugiono</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Sekretaris 2:</strong>
+                            <p>Febriana Wulandari</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Bendahara 1:</strong>
+                            <p>Kasya Putra</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Bendahara 2:</strong>
+                            <p>Mualif Ikhsan Rafif</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Ruangan:</strong>
+                            <p>Lab. TKJ 2 (Gedung B Lt. 2)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-motto animate-on-scroll">
+                    <h3><i class="fas fa-quote-left"></i> Motto Kelas</h3>
+                    <div class="motto-box">
+                        <p class="motto-text">"Code Today, Build Tomorrow - Menjadi Programmer Tangguh, Menciptakan Solusi Digital"</p>
+                        <p class="motto-author">- Kelas XI TKJ 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="section-header">
+                <h2 class="section-title">Jadwal <span>Pelajaran</span></h2>
+                <p class="section-subtitle">Jadwal pelajaran minggu ini khusus jurusan TKJ</p>
+                <div class="day-selector" id="daySelector">
+                    <button class="day-btn active" data-day="senin">Senin</button>
+                    <button class="day-btn" data-day="selasa">Selasa</button>
+                    <button class="day-btn" data-day="rabu">Rabu</button>
+                    <button class="day-btn" data-day="kamis">Kamis</button>
+                    <button class="day-btn" data-day="jumat">Jumat</button>
+                </div>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-table animate-on-scroll" id="scheduleTable">
+                    <!-- Schedule will be loaded by JavaScript -->
+                </div>
+                <div class="schedule-sidebar">
+                    <div class="current-class animate-on-scroll">
+                        <h3><i class="fas fa-clock"></i> Pelajaran Sekarang</h3>
+                        <div class="current-class-info" id="currentClass">
+                            <div class="class-time">08:00 - 09:30</div>
+                            <div class="class-name">Jaringan Komputer</div>
+                            <div class="class-teacher">Bpk. Ahmad Rizki, S.Kom</div>
+                            <div class="class-room">Lab. Jaringan</div>
+                        </div>
+                    </div>
+                    <div class="upcoming-class animate-on-scroll">
+                        <h3><i class="fas fa-forward"></i> Pelajaran Berikutnya</h3>
+                        <div class="upcoming-class-info" id="upcomingClass">
+                            <!-- Will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students" class="students-section">
+            <div class="section-header">
+                <h2 class="section-title">Anggota <span>Kelas</span></h2>
+                <p class="section-subtitle">38 siswa dengan berbagai bakat dan minat di bidang IT</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="studentSearch" placeholder="Cari nama siswa...">
+                    </div>
+                    <button class="filter-btn" id="filterBtn">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+            </div>
+            <div class="students-container" id="studentsContainer">
+                <!-- Students will be loaded by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button class="load-more-btn" id="loadMoreStudents">Tampilkan Semua Siswa</button>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">Galeri <span>Kelas</span></h2>
+                <p class="section-subtitle">Momen berharga dalam pembelajaran Teknik Komputer dan Jaringan</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="practicum">Praktikum</button>
+                    <button class="filter-btn" data-filter="competition">Kompetisi</button>
+                    <button class="filter-btn" data-filter="activity">Kegiatan</button>
+                    <button class="filter-btn" data-filter="achievement">Prestasi</button>
+                </div>
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery items will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcement Section -->
+        <section id="announcement" class="announcement-section">
+            <div class="section-header">
+                <h2 class="section-title">Pengumuman <span>Terbaru</span></h2>
+                <p class="section-subtitle">Informasi penting untuk seluruh anggota kelas TKJ 2</p>
+            </div>
+            <div class="announcement-container" id="announcementContainer">
+                <!-- Announcements will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="tasks-section">
+            <div class="section-header">
+                <h2 class="section-title">Tugas <span>& Project</span></h2>
+                <p class="section-subtitle">Daftar tugas dan project yang harus diselesaikan</p>
+            </div>
+            <div class="tasks-container">
+                <div class="tasks-list" id="tasksList">
+                    <!-- Tasks will be loaded by JavaScript -->
+                </div>
+                <div class="tasks-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Tugas Selesai</h3>
+                        <p class="stat-number" id="completedTasks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Sedang Berjalan</h3>
+                        <p class="stat-number" id="pendingTasks">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Deadline Mendekat</h3>
+                        <p class="stat-number" id="urgentTasks">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Kontak <span>Kelas</span></h2>
+                <p class="section-subtitle">Hubungi kami untuk informasi lebih lanjut</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Kelas</h3>
+                            <p>tkj2@smkn3kotaserang.sch.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>(0254) 123-4567 (Sekretariat)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Lokasi</h3>
+                            <p>Jl. Pendidikan No. 45, Kota Serang, Banten</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Media Sosial</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <h3><i class="fas fa-paper-plane"></i> Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Lengkap" required id="contactName">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required id="contactEmail">
+                        </div>
+                        <div class="form-group">
+                            <select required id="contactSubject">
+                                <option value="">Pilih Subjek</option>
+                                <option value="info">Informasi Kelas</option>
+                                <option value="project">Konsultasi Project</option>
+                                <option value="tugas">Konsultasi Tugas</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Pesan Anda" required id="contactMessage"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitContact">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Kelas XI TKJ 2</span>
+            </div>
+            <div class="footer-info">
+                <p>SMKN 3 Kota Serang | Angkatan 2024-2027</p>
+                <p>"Code Today, Build Tomorrow - Menjadi Programmer Tangguh"</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Beranda</a> | 
+                <a href="#about">Tentang</a> | 
+                <a href="#schedule">Jadwal</a> | 
+                <a href="#tasks">Tugas</a> |
+                <a href="#contact">Kontak</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Kelas XI TKJ 2. Dibuat dengan <i class="fas fa-heart"></i> untuk komunitas TKJ.</p>
+                <p class="live-time" id="footerTime"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quick Access Menu -->
+    <div class="quick-access-menu">
+        <button class="quick-btn" id="quickSchedule" title="Jadwal Hari Ini">
+            <i class="fas fa-calendar-day"></i>
+        </button>
+        <button class="quick-btn" id="quickTasks" title="Tugas (3)">
+            <i class="fas fa-tasks"></i>
+            <span class="badge">3</span>
+        </button>
+        <button class="quick-btn" id="quickNotes" title="Catatan">
+            <i class="fas fa-sticky-note"></i>
+        </button>
+        <button class="quick-btn" id="quickChat" title="Chat Kelas">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Student Modal -->
+    <div class="student-modal" id="studentModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Audio Elements -->
+    <audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+    <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+    <audio id="notificationSound" src="https://assets.mixkit.co/sfx/preview/mixkit-bubble-notification-alert-2361.mp3"></audio>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="data.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
