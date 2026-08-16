@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>happy birthday sayangg</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background dengan gradien dan efek bintang -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+
+    <!-- Floating hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="music-btn" id="musicToggle">
+            <i class="fas fa-music"></i>
+            <div class="music-pulse"></div>
+        </div>
+        <audio id="birthdaySong" loop preload="auto">
+            <source src="ssstik.io_1777298636486.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music-tooltip">🎵</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section dengan Timer Usia -->
+        <div class="hero-section">
+            <div class="cake-icon">
+                <i class="fas fa-birthday-cake"></i>
+                <div class="cake-sparkles"></div>
+            </div>
+            <h1 class="birthday-title">
+                <span class="greeting">Happy Birthday</span>
+                <span class="name" id="pacarName">Sayangku 💕</span>
+            </h1>
+            
+            <!-- Info Usia -->
+            <div class="age-info">
+                <div class="age-card">
+                    <i class="fas fa-star"></i>
+                    <span class="age-label">ke - 18 tahun</span>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+
+            <!-- Timer (dari lahir sampai sekarang) -->
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="years">00</span>
+                    <span class="countdown-label">Tahun</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="months">00</span>
+                    <span class="countdown-label">Bulan</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+            <div class="age-note">
+            </div>
+        </div>
+
+        <!-- Tombol Video Kejutan Lucu -->
+        <div class="surprise-section">
+            <button class="surprise-btn" id="surpriseBtn">
+                pencet ini bubb
+            </button>
+            <p class="surprise-hint"></p>
+        </div>
+
+        <!-- Galeri Foto Kenangan -->
+        <div class="gallery-section">
+            <h2 class="section-title">
+                <i class="fas fa-heart"></i>
+                nii yang ultahnyaa, cantikkk kann?
+                <i class="fas fa-heart"></i>
+            </h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Foto akan diisi via JS -->
+            </div>
+        </div>
+
+        <!-- Surat Cinta -->
+        <div class="letter-section">
+            <div class="letter-card">
+                <div class="letter-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>for jiaa cantik</h3>
+                </div>
+                <div class="letter-content" id="wishMessage">
+                    <p>selamatt ulang tahunn, cintaaa!</p>
+                    <p>harii ini adalah hari yang sangattttt istimewa, karena kamu lahir di dunia ini yang sangat berartii untuk aku. kamu adalah hadiah yang paling istimewaa buat akuu, makasii sayangg udaa lahir di dunia inii buat akuu.</p>
+                    <p>makasii juga yaa sayangg udaa menjadii bagian di dalam hidup aku. semenjak ada kamu, akuu selalu semangat ngejalaninn hidup inii, karena tujuan akuu cuma buat kamuuu. semoga kita bisaa tercapaii semua apa yang kitaa impikan ya sayanggg</p>
+                    <p>oiyaaa lupaa, semogaa di usia baruu inii, kamuu bisa lebih baik lagii yaa, dann kamu semoga sehat selalu, panjang umurnya, banyak UANGNYA klo bnyk ak minta yh.. hehe. dan semogaa semua impian kamu terwujud ya sayanggg aamiinn. akuu selalu ada di sini buat kamu sayangg, selalu dukung kamu sayang kamu cinta kamu semua semua semuanya.</p>
+                    <p class="signature">i'll always love you more more more foreverr!<br>-aka</p>
+                </div>
+                <button class="edit-wish-btn" id="editWishBtn">
+                    <i class="fas fa-pen"></i> Ubah Pesan
+                </button>
+            </div>
+        </div>
+
+        <!-- Birthday Balloons -->
+        <div class="balloons-container" id="balloonsContainer"></div>
+    </div>
+
+    <!-- Modal untuk Edit Pesan -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Pesan Ucapan</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <textarea id="editMessageText" rows="8" placeholder="Tulis pesan spesialmu di sini..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-save" id="saveMessageBtn">Simpan</button>
+                <button class="modal-cancel" id="cancelModalBtn">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Video Popup untuk Video Kamu Sendiri -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <div class="video-modal-header">
+                <h3><i class="fas fa-grin-tongue-squint"></i></h3>
+                <span class="video-modal-close">&times;</span>
+            </div>
+            <div class="video-container" id="videoContainer">
+                <!-- Video akan dimasukkan di sini -->
+            </div>
+            <div class="video-modal-footer">
+                <button class="next-video-btn" id="nextVideoBtn">
+                    <i class="fas fa-forward"></i> Video Selanjutnya
+                </button>
+                <button class="close-video-btn" id="closeVideoBtn">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifikasi -->
+    <div class="notification" id="notification">
+        <span id="notificationMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
