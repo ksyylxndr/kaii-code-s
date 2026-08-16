@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Kita</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="particles"></div> <!-- Efek partikel jatuh -->
+    <div class="container">
+        <h1 class="title animate__animated animate__fadeInDown">Selamat Anniversary, Sayang!</h1>
+        <div id="messageContainer">
+            <p id="message" class="message animate__animated animate__fadeIn">Klik di sini untuk membaca perasaanku padamu 💖</p>
+        </div>
+    </div>
+
+    <!-- Tombol Musik -->
+    <div id="musicButton" class="music-button">
+        <i id="musicIcon" class="fas fa-play"></i>
+    </div>
+
+    <!-- Musik Latar -->
+    <audio id="backgroundMusic" loop>
+        <source src="perfect.mp3" type="audio/mpeg"> <!-- Ganti dengan lagu favorit kalian -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
