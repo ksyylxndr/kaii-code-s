@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kas Kelas XI TKJ 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                <i class="fas fa-money-bill-wave"></i>
+                <h1>KAS KELAS</h1>
+            </div>
+            <h2>XI TKJ 2</h2>
+            <p class="school">SMKN 3 Kota Serang</p>
+        </div>
+
+        <div class="login-card">
+            <div class="login-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h3>Masuk ke Sistem</h3>
+            <p class="login-subtitle">Hanya bendahara dan pengurus yang dapat mengedit data</p>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="Masukkan username" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-key"></i>
+                        <input type="password" id="password" placeholder="Masukkan password" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Masuk
+                </button>
+            </form>
+            
+            <div class="login-info">
+                <p><i class="fas fa-info-circle"></i> <strong>Untuk melihat saja:</strong> username: <code>viewer</code>, password: <code>view123</code></p>
+                <p><i class="fas fa-user-tie"></i> <strong>Bendahara 1:</strong> Kasya Putra</p>
+                <p><i class="fas fa-user-tie"></i> <strong>Bendahara 2:</strong> Mualif Ikhsan Rafif</p>
+            </div>
+        </div>
+        
+        <div class="footer-info">
+            <p>Sistem Manajemen Kas Kelas &copy; 2025 - XI TKJ 2</p>
+            <div class="contact-dev">
+                <p><i class="fas fa-code"></i> Developed by: Achmad Suhada</p>
+                <p><i class="fas fa-envelope"></i> Email: developer@example.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
